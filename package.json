@@ -1,0 +1,39 @@
+{
+  "name": "alfred-tailwindcss-query",
+  "version": "0.0.0",
+  "description": "Search tailwindcss usage with css properties",
+  "license": "MIT",
+  "type": "module",
+  "repository": "gp0119/alfred-tailwindcss-query",
+  "author": {
+    "name": "ganpeng",
+    "email": "190875565@qq.com",
+    "url": "github.com/gp0119/alfred-tailwindcss-query"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy"
+  ],
+  "dependencies": {
+    "alfy": "^1.1.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.4.2",
+    "ava": "^5.3.1",
+    "xo": "^0.55.1"
+  }
+}
