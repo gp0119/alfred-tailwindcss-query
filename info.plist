@@ -8,11 +8,44 @@
 	<string>Uncategorised</string>
 	<key>connections</key>
 	<dict>
-		<key>BBBE972B-8FC1-4367-B65E-9B96B2E3B57A</key>
+		<key>8F7763F6-7768-44FF-A3E9-A0F87F7D9270</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>DEBB69F5-5D5B-4E48-9740-BBECCAE2FFFE</string>
+				<string>2039762B-37E8-4475-8B27-F8844F202EB1</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B1987951-C363-4FA8-A3C7-861741C48627</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B1987951-C363-4FA8-A3C7-861741C48627</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2039762B-37E8-4475-8B27-F8844F202EB1</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>71B1E643-3CE4-4265-A06E-A0361126BC63</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -31,55 +64,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>css</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>Searching...</string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>index.js</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search tailwindcss usage with css properties</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>BBBE972B-8FC1-4367-B65E-9B96B2E3B57A</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>skipqueryencode</key>
@@ -94,28 +78,157 @@
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>DEBB69F5-5D5B-4E48-9740-BBECCAE2FFFE</string>
+			<string>2039762B-37E8-4475-8B27-F8844F202EB1</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>css</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" '1'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search tailwindcss usage with css properties</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8F7763F6-7768-44FF-A3E9-A0F87F7D9270</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>2</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1" "2"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B1987951-C363-4FA8-A3C7-861741C48627</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>71B1E643-3CE4-4265-A06E-A0361126BC63</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>BBBE972B-8FC1-4367-B65E-9B96B2E3B57A</key>
+		<key>2039762B-37E8-4475-8B27-F8844F202EB1</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>770</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>90</real>
 		</dict>
-		<key>DEBB69F5-5D5B-4E48-9740-BBECCAE2FFFE</key>
+		<key>71B1E643-3CE4-4265-A06E-A0361126BC63</key>
 		<dict>
 			<key>xpos</key>
-			<real>690</real>
+			<real>775</real>
 			<key>ypos</key>
-			<real>30</real>
+			<real>290</real>
+		</dict>
+		<key>8F7763F6-7768-44FF-A3E9-A0F87F7D9270</key>
+		<dict>
+			<key>xpos</key>
+			<real>105</real>
+			<key>ypos</key>
+			<real>95</real>
+		</dict>
+		<key>B1987951-C363-4FA8-A3C7-861741C48627</key>
+		<dict>
+			<key>xpos</key>
+			<real>440</real>
+			<key>ypos</key>
+			<real>290</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
