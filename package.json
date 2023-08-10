@@ -1,6 +1,6 @@
 {
   "name": "alfred-tailwindcss-query",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Search tailwindcss usage with css properties",
   "license": "MIT",
   "type": "module",
@@ -8,7 +8,7 @@
   "author": {
     "name": "ganpeng",
     "email": "190875565@qq.com",
-    "url": "github.com/gp0119/alfred-tailwindcss-query"
+    "url": "https://github.com/gp0119/alfred-tailwindcss-query"
   },
   "engines": {
     "node": ">=4"

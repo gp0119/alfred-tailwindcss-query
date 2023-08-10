@@ -1,4 +1,4 @@
-# alfred-tailwindcss-query [![Build Status](https://travis-ci.org/gp0119/alfred-tailwindcss-query.svg?branch=master)](https://travis-ci.org/gp0119/alfred-tailwindcss-query)
+# alfred-tailwindcss-query [![npm version](https://img.shields.io/npm/v/alfred-tailwindcss-query.svg?sanitize=true)](https://github.com/gp0119/alfred-tailwindcss-query)
 
 > Search tailwindcss usage with css properties
 
@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install --global alfred-tailwindcss-query
+```bash
+npm i -g alfred-tailwindcss-query
 ```
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*

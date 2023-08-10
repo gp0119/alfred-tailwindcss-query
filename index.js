@@ -25,20 +25,18 @@ if (!queryTw) {
 		matches = result.map((item) => item.item);
 	}
 	output = matches.map((key) => ({
+		uid: key,
 		title: key,
 		subtitle: "press enter to see all classes",
 		arg: key,
 		mods: {
 			cmd: {
-				subtitle: "open in browser",
+				subtitle: "Open docs in browser",
 				arg: `https://tailwindcss.com/docs/${docsMap[key] || key}`,
 			},
 		},
 	}));
 } else {
-	const index = cssPorperties.indexOf(query);
-	cssPorperties.splice(index, 1);
-	cssPorperties.unshift(query);
 	alfy.cache.set("cssPorperties", cssPorperties);
 	const twArray = utilities[query] || [];
 	output = twArray.map(([tw, css]) => {
@@ -50,7 +48,7 @@ if (!queryTw) {
 			arg: tw,
 			mods: {
 				cmd: {
-					subtitle: "open in browser",
+					subtitle: "Open docs in browser",
 					arg: `https://tailwindcss.com/docs/${docsMap[query] || query}`,
 				},
 			},
