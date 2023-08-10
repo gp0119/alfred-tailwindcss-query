@@ -25,7 +25,6 @@ if (!queryTw) {
 		matches = result.map((item) => item.item);
 	}
 	output = matches.map((key) => ({
-		uid: key,
 		title: key,
 		subtitle: "press enter to see all classes",
 		arg: key,
@@ -37,6 +36,9 @@ if (!queryTw) {
 		},
 	}));
 } else {
+	const index = cssPorperties.indexOf(query);
+	cssPorperties.splice(index, 1);
+	cssPorperties.unshift(query);
 	alfy.cache.set("cssPorperties", cssPorperties);
 	const twArray = utilities[query] || [];
 	output = twArray.map(([tw, css]) => {
