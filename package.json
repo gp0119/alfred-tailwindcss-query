@@ -1,6 +1,6 @@
 {
   "name": "alfred-tailwindcss-query",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Search tailwindcss usage with css properties",
   "license": "MIT",
   "type": "module",

@@ -2,6 +2,7 @@
 
 > Search tailwindcss usage with css properties
 
+<img src="usage.gif" width="580">
 
 ## Install
 
@@ -14,7 +15,7 @@ $ npm install --global alfred-tailwindcss-query
 
 ## Usage
 
-In Alfred, type `css`, <kbd>Enter</kbd>, and your query.
+In Alfred, type `tw`, <kbd>Enter</kbd>, and your query.
 
 
 ## License
