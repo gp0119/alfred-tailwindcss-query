@@ -16,10 +16,14 @@ const docsMap = {
 };
 const fuse = new Fuse(cssPorperties, {});
 let output;
-
 if (!queryTw) {
 	const result = fuse.search(query);
-	const matches = result.map((item) => item.item);
+	let matches;
+	if (!query) {
+		matches = cssPorperties;
+	} else {
+		matches = result.map((item) => item.item);
+	}
 	output = matches.map((key) => ({
 		title: key,
 		subtitle: "press enter to see all classes",
