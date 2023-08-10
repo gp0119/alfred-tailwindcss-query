@@ -1,59 +1,57 @@
 "use strict";
 import alfy from "alfy";
-import tailwindJson from "./tailwindcss.json" assert { type: "json" };
+import Fuse from "fuse.js";
+import utilities from "./utilities.json" assert { type: "json" };
 
-// 截取最后两个参数
-const [query, step] = process.argv.slice(-2);
+const queryTw = process.env.query_tw;
+const query = process.argv[process.argv.length - 1];
+const cssPorperties = alfy.cache.get("cssPorperties") || Object.keys(utilities);
+const docsMap = {
+	"grid-column-start": "grid-column",
+	"grid-column-end": "grid-column",
+	"grid-row-start": "grid-row",
+	"grid-row-end": "grid-row",
+	accessibility: "screen-readers",
+	inset: "top-right-bottom-left",
+};
+const fuse = new Fuse(cssPorperties, {});
+let output;
 
-const cssPorperties = Object.keys(tailwindJson);
-
-const orginalInput = query;
-const input = orginalInput.toLowerCase().replace(/-/g, " ");
-
-const matches = alfy.matches(input, cssPorperties);
-
-function generateItems(key) {
-	if (Number(step) === 1) {
-		return matches.map((key) => ({
-			title: key.toLowerCase(),
-			subtitle: "press enter",
-			arg: key.toLowerCase(),
+if (!queryTw) {
+	const result = fuse.search(query);
+	const matches = result.map((item) => item.item);
+	output = matches.map((key) => ({
+		title: key,
+		subtitle: "press enter to see all classes",
+		arg: key,
+		mods: {
+			cmd: {
+				subtitle: "open in browser",
+				arg: `https://tailwindcss.com/docs/${docsMap[key] || key}`,
+			},
+		},
+	}));
+} else {
+	const index = cssPorperties.indexOf(query);
+	cssPorperties.splice(index, 1);
+	cssPorperties.unshift(query);
+	alfy.cache.set("cssPorperties", cssPorperties);
+	const twArray = utilities[query] || [];
+	output = twArray.map(([tw, css]) => {
+		return {
+			title: tw,
+			subtitle: Object.entries(css)
+				.map(([key, value]) => `${key}: ${value}`)
+				.join("; "),
+			arg: tw,
 			mods: {
 				cmd: {
 					subtitle: "open in browser",
-					arg: `https://tailwindcss.com/docs/${key
-						.toLowerCase()
-						.split(" ")
-						.join("-")}`,
+					arg: `https://tailwindcss.com/docs/${docsMap[query] || query}`,
 				},
 			},
-		}));
-	} else {
-		const newKey = key
-			.split(" ")
-			.map((item) => item.replace(/^\S/, (s) => s.toUpperCase()))
-			.join(" ");
-		const twObj = tailwindJson[newKey] || {};
-		return Object.keys(twObj).reduce((acc, tw) => {
-			acc.push({
-				title: tw,
-				subtitle: `.${tw}: { ${Object.keys(twObj[tw])
-					.map((css) => `${css}: ${twObj[tw][css]}`)
-					.join("; ")} }`,
-				arg: tw,
-				mods: {
-					cmd: {
-						subtitle: "open in browser",
-						arg: `https://tailwindcss.com/docs/${key
-							.toLowerCase()
-							.split(" ")
-							.join("-")}`,
-					},
-				},
-			});
-			return acc;
-		}, []);
-	}
+		};
+	});
 }
 
-alfy.output(generateItems(query));
+alfy.output(output);
