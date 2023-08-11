@@ -1,6 +1,6 @@
 {
   "name": "alfred-tailwindcss-query",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Search tailwindcss usage with css properties",
   "license": "MIT",
   "type": "module",
@@ -19,8 +19,9 @@
     "preuninstall": "alfy-cleanup"
   },
   "files": [
-    "index.js",
-    "utilities.json",
+    "lib/**/*",
+    "getCss.js",
+    "getUsage.js",
     "icon.png",
     "info.plist"
   ],

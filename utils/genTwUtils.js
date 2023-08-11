@@ -733,5 +733,4 @@ plugins.forEach((plugin) => {
 	] = pluginValue;
 });
 
-console.log("utilities: ", utilities);
-fs.writeFileSync("utilities.json", JSON.stringify(utilities), "utf8");
+fs.writeFileSync("../lib/utilities.json", JSON.stringify(utilities), "utf8");
